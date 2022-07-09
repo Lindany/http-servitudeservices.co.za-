@@ -17,6 +17,48 @@
 
     <!-- Stylesheet -->
     <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            font-family: Arial;
+        }
+
+        /* Style the tab */
+        .tab {
+            overflow: hidden;
+            border: 1px solid #ccc;
+            background-color: #f1f1f1;
+        }
+
+        /* Style the buttons inside the tab */
+        .tab button {
+            background-color: inherit;
+            float: left;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 16px;
+            transition: 0.3s;
+            font-size: 17px;
+        }
+
+        /* Change background color of buttons on hover */
+        .tab button:hover {
+            background-color: #ddd;
+        }
+
+        /* Create an active/current tablink class */
+        .tab button.active {
+            background-color: #ccc;
+        }
+
+        /* Style the tab content */
+        .tabcontent {
+            display: none;
+            padding: 6px 12px;
+            border: 1px solid #ccc;
+            border-top: none;
+        }
+    </style>
 
 </head>
 
@@ -125,8 +167,9 @@
     <!-- ##### Breadcrumb Area End ##### -->
 
     <!-- ##### Services Area Start ###### -->
-    <section class="services-area section-padding-100-0">
-        <div class="container">
+    <section class="services-area section-padding-100-0  mb-100"">
+        <div class="container  mb-100">
+
             <div class="row">
                 <div class="col-12">
                     <!-- Section Heading -->
@@ -138,84 +181,17 @@
                 </div>
             </div>
 
-            <div class="row">
-                <!-- Single Service Area -->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="single-service-area d-flex mb-100">
-                        <div class="icon">
-                            <i class="icon-profits"></i>
-                        </div>
-                        <div class="text"> <button type="button" class="btn" data-toggle="collapse" data-target="#demo1"
-                                aria-expanded="false" aria-controls="#demo1">
-                                <h5>Internal Audit Services</h5>
-                            </button>
-                            <div id="demo1" class="collapse">
-                                <p>
-                                    To provide independent objective assurance and consulting services designed to add
-                                    value and improve the organisation’s operations.
-                                    The internal activity helps organisations accomplish their objectives by bringing a
-                                    systematic, disciplined approach to evaluate
-                                    and improve the effectiveness of governance, risk management, and control processes.
-                                </p>
-                                <br>
-                                <p>
+            <div class="tab">
+                <button class="tablinks" onclick="openCity(event, 'accounting')">Accounting & Taxation Services</button>
+                <button class="tablinks" onclick="openCity(event, 'audit')">Audit & Advisory Services</button>
+                <button class="tablinks" onclick="openCity(event, 'it')">ICT & Other Supply Services</button>
+                <button class="tablinks" onclick="openCity(event, 'consultation')">Consultancy Services</button>
+            </div>
 
-                                    Govern the IA services by adherence to the mandatory elements of The Institute of
-                                    Internal Auditors' International Professional
-                                    Practices Framework, including the Core Principles for the Professional Practice of
-                                    Internal Auditing, the Code of Ethics, the
-                                    International Standards for the Professional Practice of Internal Auditing, and the
-                                    Definition of Internal Auditing. </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+            <div id="accounting" class="tabcontent">
 
                 <!-- Single Service Area -->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="single-service-area d-flex mb-100">
-                        <div class="icon">
-                            <i class="icon-money-1"></i>
-                        </div>
-                        <div class="text">
-                            <button type="button" class="btn" data-toggle="collapse" data-target="#demo2"
-                                aria-expanded="false" aria-controls="#demo2">
-                                <h5>Risk Management</h5>
-                            </button>
-                            <div id="demo2" class="collapse">
-                                <p>Servitude Services Trading is committed to creating and using a well-structured and
-                                    widely
-                                    communicated risk management system to improve internal controls, governance
-                                    processes and maximise opportunities throughout the
-                                    orgarnisation in order to improve service delivery and ensure that set strategic
-                                    objectives are attained. In order for the
-                                    orgarnisation to effectively deal with threats that are brought to bear by the risk
-                                    prone environment in the orgarnisation,
-                                    risk management practices become an important aspect of the Organisation’s strategic
-                                    management.</p>
-                                <br>
-
-                                <p>Servitude Services Trading is committed to facilitate the overall risk assessment
-                                    where the orgarnisation’s management
-                                    identified risks and controls related to the entity’s objectives. The risks
-                                    identified are classified and prioritized, and action
-                                    plans/ risk responses are recorded to manage the identified residual risks.</p>
-                                <br>
-
-                                <p>Risk management is not a complex process but does require individuals to support and
-                                    implement the basic principles on a continuing
-                                    basis. It ensures that all orgarnisation personnel will have a voice in the critical
-                                    decisions that determine success or failure in all
-                                    operations and activities. Properly implemented, risk management will always enhance
-                                    performance and will result to achieve strategic
-                                    outcomes and output. </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Single Service Area -->
-                <div class="col-12 col-md-6 col-lg-4">
+                <div class="col-12 ">
                     <div class="single-service-area d-flex mb-100">
                         <div class="icon">
                             <i class="icon-coin"></i>
@@ -253,8 +229,78 @@
                     </div>
                 </div>
 
+
+
+                <div class="col-12 ">
+                    <div class="single-service-area d-flex mb-100">
+                        <div class="icon">
+                            <i class="icon-piggy-bank"></i>
+                        </div>
+                        <div class="text">
+                            <button type="button" class="btn" data-toggle="collapse" data-target="#demo8"
+                                aria-expanded="false" aria-controls="#demo8">
+                                <h5>Vat Review and Recovery</h5>
+                            </button>
+                            <div id="demo8" class="collapse">
+                                <p><b>Our Services include:</b><br>
+                                    • We register your institution for VAT if nor already VAT registered.<br />
+                                    • We have an automated VAT 201 system.<br />
+                                    • Our system is compatible with most of the accounting systems.<br />
+                                    • We make use of data analytic tools like SQL , ACL, etc.<br />
+                                    • Utilization of our system significantly reduces the turnaround time in respect of
+                                    the review and recovery.<br />
+                                    • Introduce best and efficient monthly VAT 201 submissions going forward.<br />
+                                    • We don’t share our client’s information with anybody.<br />
+                                    • Should any refund be claimable, we are responsible to deal with SARS because as
+                                    tax practitioners.<br />
+                                    • We supply all the necessary proof and documents to satisfy the SARS audit
+                                    needs.<br />
+                                    • We do this up to the point of the transfer of the SARS refund into the
+                                    Institution’s bank account.</p>
+                                <br>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div id="audit" class="tabcontent">
                 <!-- Single Service Area -->
-                <div class="col-12 col-md-6 col-lg-4">
+                <div class="col-12 ">
+                    <div class="single-service-area d-flex mb-100">
+                        <div class="icon">
+                            <i class="icon-profits"></i>
+                        </div>
+                        <div class="text"> <button type="button" class="btn" data-toggle="collapse" data-target="#demo1"
+                                aria-expanded="false" aria-controls="#demo1">
+                                <h5>Internal Audit Services</h5>
+                            </button>
+                            <div id="demo1" class="collapse">
+                                <p>
+                                    To provide independent objective assurance and consulting services designed to add
+                                    value and improve the organisation’s operations.
+                                    The internal activity helps organisations accomplish their objectives by bringing a
+                                    systematic, disciplined approach to evaluate
+                                    and improve the effectiveness of governance, risk management, and control processes.
+                                </p>
+                                <br>
+                                <p>
+
+                                    Govern the IA services by adherence to the mandatory elements of The Institute of
+                                    Internal Auditors' International Professional
+                                    Practices Framework, including the Core Principles for the Professional Practice of
+                                    Internal Auditing, the Code of Ethics, the
+                                    International Standards for the Professional Practice of Internal Auditing, and the
+                                    Definition of Internal Auditing. </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Service Area -->
+                <div class="col-12 ">
                     <div class="single-service-area d-flex mb-100">
                         <div class="icon">
                             <i class="icon-smartphone-1"></i>
@@ -308,43 +354,47 @@
                     </div>
                 </div>
 
+
+            </div>
+
+            <div id="it" class="tabcontent">
                 <!-- Single Service Area -->
-                <div class="col-12 col-md-6 col-lg-4">
+                <div class="col-12 ">
                     <div class="single-service-area d-flex mb-100">
                         <div class="icon">
-                            <i class="icon-diamond"></i>
+                            <i class="icon-profits"></i>
                         </div>
                         <div class="text">
-                            <button type="button" class="btn" data-toggle="collapse" data-target="#demo5"
-                                aria-expanded="false" aria-controls="#demo5">
-                                <h5>Effectiveness and Efficiency</h5>
+                            <button type="button" class="btn" data-toggle="collapse" data-target="#demo7"
+                                aria-expanded="false" aria-controls="#demo7">
+                                <h5>Information and <br />Communications Technology</h5>
                             </button>
-                            <div id="demo5" class="collapse">
-                                <p>To ensure that all resources including human capital
-                                    are fully utilised and costs are saved where necessary.
-                                    Develop and present daily, weekly, monthly and quarterly reports to the business
-                                    management on the progress of their
-                                    section’s performance measures and strategic initiatives.</p>
-                                <p>
-                                    To ensure that employees and managers fully understand their key performance
-                                    indicators and understand how to track and
-                                    improve their own performances by making use of statistics and other performance
-                                    data tools to motivate the individual
-                                    and teams to improve overall performance.</p><br>
-                                <p>
-                                    To Monitor and track the business performances, identify bottlenecks and areas to
-                                    gain efficiencies and devise remedial
-                                    plans with the Business Management.</p><br>
-                                <p>
-                                    Ensure all resources are fully utilised and allocated to the areas of best
-                                    performance.</p>
+                            <div id="demo7" class="collapse">
+                                <p>The 4th Industrial Revolution (4IR) is inevitable reality hence our organisation
+                                    has partnered with a firm that has got immense capacity and experience in ICT
+                                    products and services.<br>
+                                    COVID 19 has forced a lot of organisation including government to adopt working
+                                    online or employees working remotely or at home.
+                                    Even schools adopted online learning and this means organisations have to invest in
+                                    ICT products and services that
+                                    is where we as SST come & fit in and bring a solution to any ICT related needs.<br>
+                                    We offer tailor-made products , systems and services to bring solution to business
+                                    needs.<br>
+                                    <b>Products in question are but not limited to:</b><br>
+                                    • Tablets ,Notebooks / laptops, TV screens for office use, home, schools and
+                                    personal use.<br>
+                                    • Telecommunications services, consumer electronics and e-education materials.
+                                </p>
                             </div>
                         </div>
                     </div>
                 </div>
 
+            </div>
+
+            <div id="consultation" class="tabcontent">
                 <!-- Single Service Area -->
-                <div class="col-12 col-md-6 col-lg-4">
+                <div class="col-12 ">
                     <div class="single-service-area d-flex mb-100">
                         <div class="icon">
                             <i class="icon-piggy-bank"></i>
@@ -398,69 +448,44 @@
                     </div>
                 </div>
 
-                <!-- Single Service Area -->
-                <div class="col-12 col-md-6 col-lg-4">
+                  <!-- Single Service Area -->
+                  <div class="col-12 ">
                     <div class="single-service-area d-flex mb-100">
                         <div class="icon">
-                            <i class="icon-profits"></i>
+                            <i class="icon-money-1"></i>
                         </div>
                         <div class="text">
-                            <button type="button" class="btn" data-toggle="collapse" data-target="#demo7"
-                                aria-expanded="false" aria-controls="#demo7">
-                                <h5>Information and <br />Communications Technology</h5>
+                            <button type="button" class="btn" data-toggle="collapse" data-target="#demo2"
+                                aria-expanded="false" aria-controls="#demo2">
+                                <h5>Risk Management</h5>
                             </button>
-                            <div id="demo7" class="collapse">
-                                <p>The 4th Industrial Revolution (4IR) is inevitable reality hence our organisation
-                                    has partnered with a firm that has got immense capacity and experience in ICT
-                                    products and services.<br>
-                                    COVID 19 has forced a lot of organisation including government to adopt working
-                                    online or employees working remotely or at home.
-                                    Even schools adopted online learning and this means organisations have to invest in
-                                    ICT products and services that
-                                    is where we as SST come & fit in and bring a solution to any ICT related needs.<br>
-                                    We offer tailor-made products , systems and services to bring solution to business
-                                    needs.<br>
-                                    <b>Products in question are but not limited to:</b><br>
-                                    • Tablets ,Notebooks / laptops, TV screens for office use, home, schools and
-                                    personal use.<br>
-                                    • Telecommunications services, consumer electronics and e-education materials.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-
-
-
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="single-service-area d-flex mb-100">
-                        <div class="icon">
-                            <i class="icon-piggy-bank"></i>
-                        </div>
-                        <div class="text">
-                            <button type="button" class="btn" data-toggle="collapse" data-target="#demo8"
-                                aria-expanded="false" aria-controls="#demo8">
-                                <h5>Vat Review and Recovery</h5>
-                            </button>
-                            <div id="demo8" class="collapse">
-                                <p><b>Our Services include:</b><br>
-                                    • We register your institution for VAT if nor already VAT registered.<br />
-                                    • We have an automated VAT 201 system.<br />
-                                    • Our system is compatible with most of the accounting systems.<br />
-                                    • We make use of data analytic tools like SQL , ACL, etc.<br />
-                                    • Utilization of our system significantly reduces the turnaround time in respect of
-                                    the review and recovery.<br />
-                                    • Introduce best and efficient monthly VAT 201 submissions going forward.<br />
-                                    • We don’t share our client’s information with anybody.<br />
-                                    • Should any refund be claimable, we are responsible to deal with SARS because as
-                                    tax practitioners.<br />
-                                    • We supply all the necessary proof and documents to satisfy the SARS audit
-                                    needs.<br />
-                                    • We do this up to the point of the transfer of the SARS refund into the
-                                    Institution’s bank account.</p>
+                            <div id="demo2" class="collapse">
+                                <p>Servitude Services Trading is committed to creating and using a well-structured and
+                                    widely
+                                    communicated risk management system to improve internal controls, governance
+                                    processes and maximise opportunities throughout the
+                                    orgarnisation in order to improve service delivery and ensure that set strategic
+                                    objectives are attained. In order for the
+                                    orgarnisation to effectively deal with threats that are brought to bear by the risk
+                                    prone environment in the orgarnisation,
+                                    risk management practices become an important aspect of the Organisation’s strategic
+                                    management.</p>
                                 <br>
 
+                                <p>Servitude Services Trading is committed to facilitate the overall risk assessment
+                                    where the orgarnisation’s management
+                                    identified risks and controls related to the entity’s objectives. The risks
+                                    identified are classified and prioritized, and action
+                                    plans/ risk responses are recorded to manage the identified residual risks.</p>
+                                <br>
+
+                                <p>Risk management is not a complex process but does require individuals to support and
+                                    implement the basic principles on a continuing
+                                    basis. It ensures that all orgarnisation personnel will have a voice in the critical
+                                    decisions that determine success or failure in all
+                                    operations and activities. Properly implemented, risk management will always enhance
+                                    performance and will result to achieve strategic
+                                    outcomes and output. </p>
                             </div>
                         </div>
                     </div>
@@ -468,10 +493,46 @@
 
 
 
-
+                <!-- Single Service Area -->
+                <div class="col-12 ">
+                    <div class="single-service-area d-flex mb-100">
+                        <div class="icon">
+                            <i class="icon-diamond"></i>
+                        </div>
+                        <div class="text">
+                            <button type="button" class="btn" data-toggle="collapse" data-target="#demo5"
+                                aria-expanded="false" aria-controls="#demo5">
+                                <h5>Effectiveness and Efficiency</h5>
+                            </button>
+                            <div id="demo5" class="collapse">
+                                <p>To ensure that all resources including human capital
+                                    are fully utilised and costs are saved where necessary.
+                                    Develop and present daily, weekly, monthly and quarterly reports to the business
+                                    management on the progress of their
+                                    section’s performance measures and strategic initiatives.</p>
+                                <p>
+                                    To ensure that employees and managers fully understand their key performance
+                                    indicators and understand how to track and
+                                    improve their own performances by making use of statistics and other performance
+                                    data tools to motivate the individual
+                                    and teams to improve overall performance.</p><br>
+                                <p>
+                                    To Monitor and track the business performances, identify bottlenecks and areas to
+                                    gain efficiencies and devise remedial
+                                    plans with the Business Management.</p><br>
+                                <p>
+                                    Ensure all resources are fully utilised and allocated to the areas of best
+                                    performance.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
 
             </div>
 
+            <div class="row">
+           
+            </div>
 
         </div>
     </section>
@@ -614,6 +675,22 @@
             s.onload = function () { WhWidgetSendButton.init(host, proto, options); };
             var x = document.getElementsByTagName('script')[0]; x.parentNode.insertBefore(s, x);
         })();
+    </script>
+
+    <script>
+        function openCity(evt, cityName) {
+            var i, tabcontent, tablinks;
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+            document.getElementById(cityName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
     </script>
     <!-- /GetButton.io widget -->
     <!-- ##### All Javascript Script ##### -->
