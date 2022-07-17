@@ -107,7 +107,7 @@ define('EMAIL_SUBJECT_AFTER', '');
 define('USE_SMTP', 'NO'); // YES or NO
 define('SMTP_HOST', 'mail.sstgroupholding.co.za');
 define('SMTP_USER', 'info@sstgroupholding.co.za');
-define('SMTP_PASS', 'info@sstgroupholding.co.za');
+define('SMTP_PASS', 'SSTgroup@101!');
 define('SMTP_AUTH', '');
 define('SMTP_SECURE', ''); // STARTTLS, SMTPS (port 465) or empty
 define('SMTP_PORT', '');
