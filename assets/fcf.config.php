@@ -53,7 +53,7 @@ $rules = array(
 // ******************
 // THANK YOU PAGE
 // ******************
-define('THANK_YOU_PAGE','');
+define('THANK_YOU_PAGE','contact.html');
 
 
 // **************************
